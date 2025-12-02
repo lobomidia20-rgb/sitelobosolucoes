@@ -5,7 +5,14 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/sitelobosolucoes/" : "/",
+  base:
+    mode === "production"
+      ? (() => {
+          const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
+          const fromEnv = process.env.BASE_PATH;
+          return repo ? `/${repo}/` : fromEnv ? `/${fromEnv}/` : "/";
+        })()
+      : "/",
   server: {
     host: "::",
     port: 8080,
