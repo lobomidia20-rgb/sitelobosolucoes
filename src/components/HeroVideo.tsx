@@ -41,7 +41,7 @@ export const HeroVideo = () => {
         <div className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-glow border border-primary/20">
           <iframe
             className="w-full h-full"
-            src="https://www.youtube.com/embed/lZVmP2Ks8Ws?autoplay=1&mute=1&loop=1&playlist=lZVmP2Ks8Ws&controls=1&rel=0&modestbranding=1"
+            src="https://www.youtube-nocookie.com/embed/lZVmP2Ks8Ws?autoplay=1&mute=1&loop=1&playlist=lZVmP2Ks8Ws&controls=1&rel=0&modestbranding=1"
             title="Lobo Soluções - Energia Solar"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

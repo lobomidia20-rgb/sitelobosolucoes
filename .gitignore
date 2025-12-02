@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local SSH keys and sensitive files
+2013lobo@@@
+2013lobo@@@.pub

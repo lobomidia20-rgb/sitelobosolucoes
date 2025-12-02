@@ -7,10 +7,11 @@ interface StatItem {
   suffix: string;
   label: string;
   color: string;
+  display?: string;
 }
 
 const stats: StatItem[] = [
-  { icon: Users, value: 1000, suffix: "+", label: "Clientes Satisfeitos", color: "text-primary" },
+  { icon: Users, value: 5000, suffix: "", label: "Clientes Satisfeitos", color: "text-primary", display: "5 mil" },
   { icon: MapPin, value: 200, suffix: "", label: "Cidades Atendidas", color: "text-secondary" },
   { icon: Zap, value: 40000, suffix: "+", label: "Placas Instaladas", color: "text-primary-glow" },
   { icon: Briefcase, value: 100, suffix: "", label: "Colaboradores", color: "text-secondary" },
@@ -72,7 +73,7 @@ export const StatsSection = () => {
                 </div>
                 
                 <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">
-                  <CountUp end={stat.value} />
+                  {stat.display ? <span>{stat.display}</span> : <CountUp end={stat.value} />}
                   {stat.suffix}
                 </div>
                 
