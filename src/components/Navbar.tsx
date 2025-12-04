@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoLobo from "@/assets/logo-lobo-white.png";
 
@@ -20,9 +20,10 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button variant="outline" size="icon" className="md:hidden">
-            <Menu className="w-5 h-5" />
+          <Button size="sm" className="md:hidden shadow-glow" asChild>
+            <a href="https://wa.me/5573980641617" target="_blank" rel="noopener noreferrer">
+              Fale Conosco
+            </a>
           </Button>
         </div>
       </div>
