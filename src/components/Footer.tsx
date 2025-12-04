@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer id="contato" className="bg-card border-t border-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Brand */}
           <div>
             <img src={logoLobo} alt="Lobo Soluções" className="h-12 mb-3" />
@@ -42,16 +42,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Empresa</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Sobre Nós</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Nossos Serviços</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Projetos Realizados</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-            </ul>
-          </div>
+          
 
           {/* Contact */}
           <div>

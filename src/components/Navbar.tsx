@@ -12,25 +12,8 @@ export const Navbar = () => {
             <img src={logoLobo} alt="Lobo Soluções" className="h-12 md:h-14" />
           </a>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#sobre" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Sobre Nós
-            </a>
-            <a href="#servicos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Serviços
-            </a>
-            <a href="#projetos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Projetos
-            </a>
-            <a href="#contato" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Contato
-            </a>
-            <Button 
-              size="sm" 
-              className="shadow-glow"
-              asChild
-            >
+          <div className="hidden md:flex items-center">
+            <Button size="sm" className="shadow-glow" asChild>
               <a href="http://wa.me/+5573998064161" target="_blank" rel="noopener noreferrer">
                 Fale Conosco
               </a>
