@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BASE_PATH: "/"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,6 +36,7 @@ jobs:
         run: |
           npm run build
           cp docs/index.html docs/404.html
+          echo "lobosolucoes.com.br" > docs/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

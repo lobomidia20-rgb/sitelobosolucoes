@@ -10,7 +10,12 @@ export default defineConfig(({ mode }) => ({
       ? (() => {
           const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
           const fromEnv = process.env.BASE_PATH;
-          return repo ? `/${repo}/` : fromEnv ? `/${fromEnv}/` : "/";
+          if (fromEnv) {
+            const cleaned = fromEnv.trim();
+            if (cleaned === "/" || cleaned === "") return "/";
+            return `/${cleaned.replace(/^\/+|\/+$/g, "")}/`;
+          }
+          return repo ? `/${repo}/` : "/";
         })()
       : "/",
   server: {
