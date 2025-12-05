@@ -25,14 +25,13 @@ export const Navbar = () => {
             <a href="/" className="flex items-center">
               <img src={logoLobo} alt="Lobo Soluções" className="h-12 md:h-14" />
             </a>
-            <div className="hidden sm:block relative h-20 md:h-24 w-36 md:w-48 overflow-hidden rounded-lg ring-1 ring-yellow-400/20 bg-yellow-400/5 drop-shadow-[0_0_12px_rgba(255,215,0,0.35)]">
+            <div className="block h-16 md:h-24 w-32 md:w-48 overflow-hidden">
               <img
                 src={import.meta.env.BASE_URL + "logo-slogan.png"}
                 alt={"Slogan Lobo Soluções"}
                 className={"w-full h-full object-cover"}
                 onError={(e) => (e.currentTarget.style.display = "none")}
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-yellow-300/20 via-transparent to-yellow-300/20" />
             </div>
           </div>
 
