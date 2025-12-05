@@ -14,7 +14,7 @@ export const Navbar = () => {
             <img
               src={import.meta.env.BASE_URL + "logo-slogan.png"}
               alt="Slogan Lobo Soluções"
-              className="block h-20 md:h-24 object-contain"
+              className="block h-16 md:h-20 object-contain max-w-[180px] md:max-w-[240px]"
               onError={(e) => (e.currentTarget.style.display = "none")}
             />
           </div>
