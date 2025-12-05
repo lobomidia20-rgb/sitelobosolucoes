@@ -11,12 +11,14 @@ export const Navbar = () => {
             <a href="/" className="flex items-center">
               <img src={logoLobo} alt="Lobo Soluções" className="h-16 md:h-20" />
             </a>
-            <img
-              src={import.meta.env.BASE_URL + "logo-slogan.png"}
-              alt="Slogan Lobo Soluções"
-              className="block h-40 md:h-48 object-contain max-w-[420px] md:max-w-[560px]"
-              onError={(e) => (e.currentTarget.style.display = "none")}
-            />
+            <div className="hidden sm:block h-40 md:h-48 w-48 md:w-64 overflow-hidden">
+              <img
+                src={import.meta.env.BASE_URL + "logo-slogan.png"}
+                alt="Slogan Lobo Soluções"
+                className="w-full h-full object-cover"
+                onError={(e) => (e.currentTarget.style.display = "none")}
+              />
+            </div>
           </div>
 
           <div className="hidden md:flex items-center">
