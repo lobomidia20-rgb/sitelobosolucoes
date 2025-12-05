@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoLobo from "@/assets/logo-lobo-white.png";
 
@@ -7,10 +7,18 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img src={logoLobo} alt="Lobo Soluções" className="h-12 md:h-14" />
-          </a>
+          {/* Logo + slogan */}
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center">
+              <img src={logoLobo} alt="Lobo Soluções" className="h-12 md:h-14" />
+            </a>
+            <div className="hidden sm:flex items-center gap-2">
+              <Sun className="w-4 h-4 text-yellow-400" />
+              <span className="text-xs md:text-sm text-foreground">
+                Deixe o <span className="font-bold text-yellow-400">SOL</span> pagar sua conta
+              </span>
+            </div>
+          </div>
 
           <div className="hidden md:flex items-center">
             <Button size="sm" className="shadow-glow" asChild>
