@@ -1,4 +1,5 @@
 import { Play, Volume2, VolumeX } from "lucide-react";
+import * as Tabs from "@radix-ui/react-tabs";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logoLobo from "@/assets/logo-lobo-white.png";
@@ -27,13 +28,8 @@ export const HeroVideo = () => {
             <span className="text-sm font-medium text-primary">Energia Solar em Gandu - BA</span>
           </div>
           
-          <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight"
-            style={{ textShadow: "0 0 12px rgba(255,215,0,0.35), 0 0 24px rgba(255,215,0,0.15)" }}
-          >
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              DEIXE O SOL PAGAR SUA CONTA
-            </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+            DEIXE O SOL PAGAR SUA CONTA
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
@@ -41,16 +37,35 @@ export const HeroVideo = () => {
           </p>
         </div>
 
-        {/* Video Player */}
-        <div className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-glow border border-primary/20">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube-nocookie.com/embed/lZVmP2Ks8Ws?autoplay=1&mute=1&loop=1&playlist=lZVmP2Ks8Ws&controls=1&rel=0&modestbranding=1"
-            title="Lobo Soluções - Energia Solar"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+        <Tabs.Root defaultValue="video" className="w-full max-w-5xl">
+          <Tabs.List className="flex gap-4 border-b border-border mb-6">
+            <Tabs.Trigger value="video" className="px-4 py-2 text-sm font-medium data-[state=active]:border-b-2 data-[state=active]:border-primary data-[state=active]:text-primary">
+              Vídeo
+            </Tabs.Trigger>
+            <Tabs.Trigger value="fotos" className="px-4 py-2 text-sm font-medium data-[state=active]:border-b-2 data-[state=active]:border-primary data-[state=active]:text-primary">
+              Fotos
+            </Tabs.Trigger>
+          </Tabs.List>
+
+          <Tabs.Content value="video" className="relative aspect-video rounded-2xl overflow-hidden shadow-glow border border-primary/20">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube-nocookie.com/embed/lZVmP2Ks8Ws?autoplay=1&mute=1&loop=1&playlist=lZVmP2Ks8Ws&controls=1&rel=0&modestbranding=1"
+              title="Lobo Soluções - Energia Solar"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </Tabs.Content>
+
+          <Tabs.Content value="fotos" className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+            <img src={heroSolarBg} alt="Projeto Solar" className="w-full h-40 md:h-48 object-cover rounded-lg border border-border" />
+          </Tabs.Content>
+        </Tabs.Root>
 
         {/* CTA Button */}
         <Button 
