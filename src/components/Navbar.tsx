@@ -25,7 +25,7 @@ export const Navbar = () => {
             <a href="/" className="flex items-center">
               <img src={logoLobo} alt="Lobo Soluções" className="h-12 md:h-14" />
             </a>
-            <div className="block h-16 md:h-24 w-32 md:w-48 overflow-hidden">
+            <div className="block h-14 md:h-18 w-28 md:w-40 overflow-hidden">
               <img
                 src={import.meta.env.BASE_URL + "logo-slogan.png"}
                 alt={"Slogan Lobo Soluções"}
