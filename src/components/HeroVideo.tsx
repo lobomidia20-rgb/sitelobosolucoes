@@ -27,8 +27,13 @@ export const HeroVideo = () => {
             <span className="text-sm font-medium text-primary">Energia Solar em Gandu - BA</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            DEIXE O SOL PAGAR SUA CONTA
+          <h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight"
+            style={{ textShadow: "0 0 12px rgba(255,215,0,0.35), 0 0 24px rgba(255,215,0,0.15)" }}
+          >
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              DEIXE O SOL PAGAR SUA CONTA
+            </span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
