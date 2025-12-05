@@ -36,6 +36,7 @@ jobs:
         run: |
           npm run build
           cp docs/index.html docs/404.html
+          cp public/logo-slogan.png docs/logo-slogan.png || true
           echo "lobosolucoes.com" > docs/CNAME
 
       - name: Upload Pages artifact
