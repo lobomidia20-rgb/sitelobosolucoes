@@ -7,14 +7,14 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4 md:gap-6">
             <a href="/" className="flex items-center">
               <img src={logoLobo} alt="Lobo Soluções" className="h-16 md:h-20" />
             </a>
             <img
               src={import.meta.env.BASE_URL + "logo-slogan.png"}
               alt="Slogan Lobo Soluções"
-              className="block h-16 md:h-20 object-contain"
+              className="block h-20 md:h-24 object-contain"
               onError={(e) => (e.currentTarget.style.display = "none")}
             />
           </div>
