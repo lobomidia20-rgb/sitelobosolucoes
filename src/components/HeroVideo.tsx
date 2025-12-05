@@ -28,8 +28,7 @@ export const HeroVideo = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            Economia e Sustentabilidade<br />
-            <span className="bg-gradient-primary bg-clip-text text-transparent">para seu Negócio</span>
+            DEIXE O SOL PAGAR SUA CONTA
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
