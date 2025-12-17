@@ -9,41 +9,36 @@ interface Story {
 }
 
 const stories: Story[] = [
-  { 
-    id: 1, 
-    type: "instalacao", 
-    title: "INSTALACAO EM SANTO ANTIONIO", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/mjRDBoZHTm8?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
+  {
+    id: 1,
+    type: "instalacao",
+    title: "INSTALACAO EM SANTO ANTIONIO",
+    videoUrl: "https://www.youtube-nocookie.com/embed/mjRDBoZHTm8?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
-  { 
-    id: 2, 
-    type: "instalacao", 
-    title: "INSTALACAO EM ITUBERA", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/T8z_AKt6TeM?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
+  {
+    id: 2,
+    type: "instalacao",
+    title: "INSTALACAO EM ITUBERA",
+    videoUrl: "https://www.youtube-nocookie.com/embed/T8z_AKt6TeM?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
-  { 
-    id: 3, 
-    type: "instalacao", 
-    title: "INSTALACAO EM JEQUIE", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/wkhxEvVjjRM?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
+
+  {
+    id: 4,
+    type: "instalacao",
+    title: "INSTALACAO EM IBIRATAIA",
+    videoUrl: "https://www.youtube-nocookie.com/embed/_VGp-_oSrhQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
-  { 
-    id: 4, 
-    type: "instalacao", 
-    title: "INSTALACAO EM IBIRATAIA", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/_VGp-_oSrhQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
+  {
+    id: 5,
+    type: "instalacao",
+    title: "INSTALACAO EM GANDU, TEOTONIO CALHEIRA",
+    videoUrl: "https://www.youtube-nocookie.com/embed/_VGp-_oSrhQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
-  { 
-    id: 5, 
-    type: "instalacao", 
-    title: "INSTALACAO EM GANDU, TEOTONIO CALHEIRA", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/_VGp-_oSrhQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
-  },
-  { 
-    id: 6, 
-    type: "depoimento", 
-    title: "A Melhor do Mercado", 
-    videoUrl: "https://www.youtube-nocookie.com/embed/nlDbTrruRDQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" 
+  {
+    id: 6,
+    type: "depoimento",
+    title: "A Melhor do Mercado",
+    videoUrl: "https://www.youtube-nocookie.com/embed/nlDbTrruRDQ?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
   {
     id: 7,
@@ -57,7 +52,7 @@ const stories: Story[] = [
     title: "DEPOIMENTO - VENDEDOR SAVIO",
     videoUrl: "https://www.youtube-nocookie.com/embed/IBRvWpgcPqo?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0"
   },
-  
+
 ];
 
 const sortedStories = [...stories].sort((a, b) => b.id - a.id);
@@ -101,8 +96,8 @@ const VideoPlayer = ({ story }: VideoPlayerProps) => {
 export const StoriesCarousel = () => {
   const [selectedCategory, setSelectedCategory] = useState<Story["type"] | "all">("all");
 
-  const filteredStories = selectedCategory === "all" 
-    ? uniqueStories 
+  const filteredStories = selectedCategory === "all"
+    ? uniqueStories
     : uniqueStories.filter(s => s.type === selectedCategory);
 
   return (

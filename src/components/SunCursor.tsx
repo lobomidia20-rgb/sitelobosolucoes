@@ -46,7 +46,7 @@ export const SunCursor = () => {
 
                 {/* Sun Image */}
                 <img
-                    src="/sol-cursor.png"
+                    src="/sol-cursor.svg"
                     alt="Sol"
                     className={`relative w-12 h-12 transition-all duration-300 drop-shadow-[0_0_15px_rgba(251,191,36,0.8)] ${isMoving ? "scale-125 rotate-45" : "scale-100 rotate-0"
                         }`}
